@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let receta of recetas" class="col mb-2">
+      <div class="card p-2" style="width: 15rem; height: 33rem">
+        <img
+          class="card-img-top"
+          src="{{ receta.imagen }}"
+          alt="{{ receta.nombre }}"
+          (click)="onSelected(receta)"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ receta.nombre }}</h5>
+          <p class="card-text">Opiniones: {{ receta.cantidadOpiniones }}</p>
+          <p class="card-text">Duracion: {{ receta.duracion }}</p>
+          <p class="card-text">Autor: {{ receta.autorReceta }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
